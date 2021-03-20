@@ -1,0 +1,6 @@
+package file_properties
+
+// MarshalJSON ...
+func (pt PropertyType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(pt.Tagged)
+}

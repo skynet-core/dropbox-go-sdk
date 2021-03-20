@@ -1,0 +1,3 @@
+generator/dropbox-api-spec
+*.log
+__pycache__
