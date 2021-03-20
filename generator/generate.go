@@ -103,7 +103,7 @@ func main() {
 			},
 		},
 		Action: func(c *cli.Context) error {
-			outFolder := filepath.Join(dir, "..", "sdk", "dropbox")
+			outFolder := filepath.Join(dir, "..", packageName)
 			if _, err := os.Stat(outFolder); err != nil {
 				if err = os.MkdirAll(outFolder, 0775); err != nil {
 					return err
