@@ -1,4 +1,4 @@
-module skynet-core/dropbox-go-sdk
+module github.com/skynet-core/dropbox-go-sdk
 
 go 1.16
 
