@@ -178,16 +178,7 @@ func OAuthEndpoint(domain string) oauth2.Endpoint {
 
 // Tagged is used for tagged unions.
 type Tagged struct {
-	Tag   string `json:".tag"`
-	Value string `json:"-"`
-}
-
-// MarshalJSON ...
-func (t Tagged) MarshalJSON() ([]byte, error) {
-	if t.Value != "" {
-		return json.Marshal(t.Value)
-	}
-	return json.Marshal(map[string]string{".tag": t.Tag})
+	Tag string `json:".tag"`
 }
 
 // APIError is the base type for endpoint-specific errors.
